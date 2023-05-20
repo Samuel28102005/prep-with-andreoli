@@ -1,0 +1,13 @@
+<p>vesuvio erutta</p>
+<input type="text" #name>
+<button onclick="search(name)"></button>
+<div *ngIf="ritprod && ritprod.length > 0">
+    <div *ngFor="let product of ritprod " >
+       <a routerLink="/pasta/{{product._id}}" >{{product.product_name}}</a>
+       <p>{{product.nutriments.carbohydrates}}</p>
+       <img src="{{product.image_front_url}}">
+       
+    
+
+    </div>
+   </div>
